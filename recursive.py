@@ -22,6 +22,7 @@ def fib(n):
 	else:
 		return fib(n - 1) + fib(n - 2)
 		
+		
 def Q(n):
 	'''
 	Erratic recursive function defined in Gobel, Escher, Bach
@@ -31,3 +32,14 @@ def Q(n):
 		return 1
 	else:
 		return Q(n - Q(n - 1)) + Q(n - Q(n - 2))
+		
+		
+def sum(num_list):
+	'''
+	Takes a list of numbers and sums them recursively
+	'''
+	if len(num_list) == 1:
+		return num_list[0]
+	else:
+		return num_list[0] + sum(num_list[1:])
+	
