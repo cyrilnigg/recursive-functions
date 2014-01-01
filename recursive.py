@@ -42,4 +42,19 @@ def sum(num_list):
 		return num_list[0]
 	else:
 		return num_list[0] + sum(num_list[1:])
+
+def factorInRange(k, n):
+	if k >= n:
+		return False
+	elif n % k == 0:
+		return True
+	else:
+		return factorInRange(k+1, n)
+	
+def primeTest(n):
+	'''
+	Checks to see if a number is prime using recursion
+	'''
+	assert type(n) == int and n >= 0
+	return n > 1 and not factorInRange(2, n)
 	
