@@ -44,6 +44,10 @@ def sum(num_list):
 		return num_list[0] + sum(num_list[1:])
 
 def factorInRange(k, n):
+	'''
+	Helper function for primeTest
+	Checks numbers between 2 and n
+	'''
 	if k >= n:
 		return False
 	elif n % k == 0:
@@ -53,7 +57,8 @@ def factorInRange(k, n):
 	
 def primeTest(n):
 	'''
-	Checks to see if a number is prime using recursion
+	Returns True if number is prime using recursion
+	Uses the factorInRange
 	'''
 	assert type(n) == int and n >= 0
 	return n > 1 and not factorInRange(2, n)
